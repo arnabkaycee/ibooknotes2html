@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "eta": "^1.12.1",
     "sqlite3": "^5.0.1"
   }
 }
