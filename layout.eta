@@ -2,25 +2,50 @@
 <html lang="en">
   <head>
     <style>
-    p {
+    div.underline {
       text-decoration: underline;
       -webkit-text-decoration-color: red; /* Safari */  
       text-decoration-color: red;
+    }
+    div.note {
+      background-color: lightblue;
+
     }
     </style>
     <title><%= it.title %></title>
   </head>
   <body>
-    <% for(var i = 0; i < it.data.length; ++i) {%>
+    <%
+      let chapter = "";
 
-        <h3><%=it.data[i]['Chapter']%></h3>
-        <span style="background-color:<%=it.data[i]['color']%>">
+    %>
+    <% for(var i = 0; i < it.data.length; ++i) {%>
+        
+        <% if(it.data[i]['Chapter'] != chapter) { %>
+          
+          
+          <h3><%=it.data[i]['Chapter']%></h3>
+
+          <% chapter = it.data[i]['Chapter']; %>
+
+        <% } %>
+        
+        <div style="background-color:<%=it.data[i]['color']%>">
           <% if(it.data[i]['Underlined']) { %>          
-             <p><%=it.data[i]['SelectedText']%></p>
+             <div class="underline"><%=it.data[i]['SelectedText']%></p>
           <% }else { %>
             <%=it.data[i]['SelectedText']%>
           <% } %>
-        </span>
+          </div>
+        <% if(it.data[i]['Note']) { %>
+          <br/>
+          <h4> Note: </h4>
+          <div class="note">
+            <%=it.data[i]['Note']%>
+          </div>
+        <% } %>
+        </div>
+        <br/>
     <% } %>
   </body>
 </html>
