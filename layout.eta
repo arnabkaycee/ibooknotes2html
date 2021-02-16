@@ -1,12 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <style>
+    p {
+      text-decoration: underline;
+      -webkit-text-decoration-color: red; /* Safari */  
+      text-decoration-color: red;
+    }
+    </style>
     <title><%= it.title %></title>
   </head>
   <body>
-    <% for(var i = 0; i < it.body.length; ++i) {%>
-        <h3><%=it.body[i]['Chapter']%></h3>
-        <span style="background-color:<%=it.body[i]['color']%>">
+    <% for(var i = 0; i < it.data.length; ++i) {%>
+
+        <h3><%=it.data[i]['Chapter']%></h3>
+        <span style="background-color:<%=it.data[i]['color']%>">
+          <% if(it.data[i]['Underlined']) { %>          
+             <p><%=it.data[i]['SelectedText']%></p>
+          <% }else { %>
+            <%=it.data[i]['SelectedText']%>
+          <% } %>
+        </span>
     <% } %>
   </body>
 </html>
