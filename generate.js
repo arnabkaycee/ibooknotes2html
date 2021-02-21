@@ -21,4 +21,5 @@ async function generate() {
       }
     }
   }
+}
 generate();
