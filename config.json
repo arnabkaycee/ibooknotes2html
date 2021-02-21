@@ -1,5 +1,11 @@
 {
-    "bookPath" : "/Users/arnab/Documents/01_Work/50_Book_Study/annotations/BKLibrary-1-091020131601.sqlite",
-    "notePath" : "/Users/arnab/Documents/01_Work/50_Book_Study/annotations/AEAnnotation_v10312011_1727_local.sqlite",
-    "books" : []
+    "bookPath" : "Library/Containers/com.apple.iBooksX/Data/Documents/BKLibrary",
+    "notePath" : "Library/Containers/com.apple.iBooksX/Data/Documents/AEAnnotation",
+    "exportPath" : "", 
+    "books" : ["<book ids 1>", "<book id 2>"],
+    "pdfOptions" : {
+        "format" : "A4",
+        "border" : "3"
+
+    }
 }

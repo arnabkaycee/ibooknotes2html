@@ -9,7 +9,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cli-table3": "^0.6.0",
     "eta": "^1.12.1",
+    "html-pdf": "^2.2.0",
+    "install": "^0.13.0",
+    "npm": "^7.5.4",
     "sqlite3": "^5.0.1"
   }
 }

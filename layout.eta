@@ -15,6 +15,8 @@
     <title><%= it.title %></title>
   </head>
   <body>
+    <h1><%= it.title %></h1>
+    <h2>-<%= it.author %></h2>
     <%
       let chapter = "";
 

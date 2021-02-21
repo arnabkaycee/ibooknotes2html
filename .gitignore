@@ -1,3 +1,9 @@
 node_modules
 *.php
 out*
+*.html
+*.htm
+*.pdf
+*.txt
+.vscode
+.DS_Store
